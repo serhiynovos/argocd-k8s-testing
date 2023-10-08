@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: example-configmap
+data:
+  rtp-config.properties: |
+    rtp.protocol=UDP
+    rtp.multicast.enabled=true
+    rtp.unicast.enabled=false
+
+  kafka-config.properties: |
+    kafka.bootstrap.servers=kafka-broker:9092
+    kafka.topic=mytopic
+
+  webrtc-config.properties: |
+    webrtc.stun.server=stun:stun.example.com:3478
+    webrtc.turn.server=turn:turn.example.com:3478
+    webrtc.turn.username=myuser
+    webrtc.turn.password=mypassword
